@@ -1,4 +1,5 @@
 var pizzaOrder = function(type, size) {
+  type = type.toLowerCase();
   var slices = 0;
   var category = "";
     if ((size >= 8) && (size < 10)) {
@@ -13,9 +14,9 @@ var pizzaOrder = function(type, size) {
     } if ((size >= 16) && (size <= 21)) {
       slices = slices + 12;
       category = "x-large"
-    } else if (size > 21) {
-      alert("PIZZA CASTLE: We do not serve pizzas that large. Sorry.")
-      return "invalid pizza. 21 inches is the largest size at pizza castle"
+    } else if ((size > 21) || (size < 8)) {
+      alert("PIZZA CASTLE: We do not serve pizzas that large or small. Sorry.")
+      return "invalid pizza."
     }
 
     if (type === "pepperoni") {
@@ -29,6 +30,13 @@ var pizzaOrder = function(type, size) {
     $("form#pizzaCastle").submit(function(event) {
       var size = parseInt($("input#size").val());
       var type = $("input#type").val();
+      if (size > 21) {
+        $(".invalid").show();
+        $(".valid").hide();
+      } else {
+        $(".valid").show();
+        $(".invalid").hide()
+      }
       var result = pizzaOrder(type, size);
       $(".pizza").text(result);
       $("#result").show();
