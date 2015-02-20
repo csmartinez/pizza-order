@@ -5,27 +5,30 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <script src="js/jquery-1.11.2.js"></script>
   <script src="js/scripts.js"></script>
-  <title>Triangle Type</title>
+  <title>Pizza Castle</title>
 </head>
 <body>
   <div class="container">
-    <h1><strong>Triangle Type</strong></h1><h3><strong>Enter side lengths to see what type of triangle it is!</strong></h3>
-
-    <form id="triangle">
+    <h1><strong>Pizza Castle </strong><img src="http://icons.iconarchive.com/icons/calle/black-knight/32/Baron-Carls-Castle-icon.png"></h1>
+    <h3><strong> Welcome! Enter your order below</strong></h3>
+    <h4>For a one-topping pizza there are: 6 slices per small (8-10") pizza,
+      8 slices per 12 inch pizza (medium),
+      10 slices on a large (14-16") pizza and
+      12 slices on an extra-large pizza. More toppings = More Slices.</h4>
+    <form id="pizzaCastle" class="pizzaCastle">
       <div class="form-group">
-        <label for="side_one">side one: </label>
-        <input id="side_one" placeholder="3" type="text">
-        <label for="side_two">side two: </label>
-        <input id="side_two" placeholder="3" type="text">
-        <label for="side_three">side three: </label>
-        <input id="side_three" placeholder="7" type="text">
+        <label for="type"><h4>Pepperoni or Cheese?</h4></label>
+        <input id="type" placeholder="pepperoni" type="text">
+        <label for="size"><h4>Size (inches) </h4></label>
+        <input id="size" placeholder="15" type="number">
       </div>
 
-      <button type="submit" class="btn btn-danger">Find out!</button>
+      <button type="submit" class="btn btn-danger">Order</button>
     </form>
 
     <div id="result">
-      <h3>Your triangle is <span class="triangletype"></span></h3>
+      <h3>You ordered a <span class="pizza"></span>! Thank you come again!</h3>
+      <img src="kkpizza.png" alt="A photo of Mr.Krabs smiling with a pizza">
     </div>
   </div>
 </body>

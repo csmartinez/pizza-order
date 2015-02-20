@@ -2,5 +2,9 @@
   display: none;
 }
 body {
-  background-image: url("http://www.autoconevents.com/wp-content/uploads/2014/07/828-purple-triangles-2560x1600-vector-wallpaper.jpg")
+  background-image: url("http://www.themesltd.com/backgrounds/food/hot_pizza_slices.png")
+}
+.container {
+  background-color: white;
+  padding: 16px;
 }
