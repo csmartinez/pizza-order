@@ -16,7 +16,7 @@ var pizzaOrder = function(type, size) {
       category = "x-large"
     } else if ((size > 21) || (size < 8)) {
       alert("PIZZA CASTLE: We do not serve pizzas that large or small. Sorry.")
-      return "invalid pizza."
+      return "invalid pizza"
     }
 
     if (type === "pepperoni") {
@@ -30,7 +30,7 @@ var pizzaOrder = function(type, size) {
     $("form#pizzaCastle").submit(function(event) {
       var size = parseInt($("input#size").val());
       var type = $("input#type").val();
-      if (size > 21) {
+      if ((size > 21) || (size < 8)) {
         $(".invalid").show();
         $(".valid").hide();
       } else {
