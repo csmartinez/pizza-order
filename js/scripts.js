@@ -37,7 +37,7 @@ var pizzaOrder = function(type, size) {
     $("form#pizzaCastle").submit(function(event) {
       var size = parseInt($("input#size").val());
       var type = $("input#type").val();
-      if ((size > 21) || (size < 8) || (type != "pepperoni")) {
+      if ((size > 21) || (size < 8)) {
         $(".invalid").show();
         $(".valid").hide();
       } else {
