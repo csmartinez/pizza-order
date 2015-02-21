@@ -1,7 +1,11 @@
 var pizzaOrder = function(type, size) {
   type = type.toLowerCase();
+  var toppings = [];
   var slices = 0;
   var category = "";
+  toppings.push(type);
+  thickness = toppings.length;
+
     if ((size >= 8) && (size < 10)) {
       slices = slices + 6;
       category = "small";
@@ -15,14 +19,17 @@ var pizzaOrder = function(type, size) {
       slices = slices + 12;
       category = "x-large"
     } else if ((size > 21) || (size < 8)) {
-      alert("KRUSTY KRAB PIZZA: We do not serve pizzas that large or small. Sorry.")
+      alert("We do not serve pizzas that large or small. Sorry.")
       return "invalid pizza"
     }
 
     if (type === "pepperoni") {
       return (category + " pepperoni pizza (" + slices + " slices)");
-    } else {
+    } if (type === "cheese"){
       return (category + " cheese pizza (" + (slices - 1) + " slices)");
+    } else {
+      alert("Plankton stole our secret toppings! (Sorry, we only serve pepperoni or cheese).");
+      return "invalid pizza"
     }
   }
 
@@ -30,7 +37,7 @@ var pizzaOrder = function(type, size) {
     $("form#pizzaCastle").submit(function(event) {
       var size = parseInt($("input#size").val());
       var type = $("input#type").val();
-      if ((size > 21) || (size < 8)) {
+      if ((size > 21) || (size < 8) || (type != "pepperoni")) {
         $(".invalid").show();
         $(".valid").hide();
       } else {

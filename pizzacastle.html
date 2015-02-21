@@ -20,14 +20,14 @@
         <label for="type"><h4>Pepperoni or Cheese?</h4></label>
         <input id="type" placeholder="pepperoni" type="text">
         <label for="size"><h4>Size (inches) </h4></label>
-        <input id="size" placeholder="15" type="number">
+        <input id="size" placeholder="15" type="number" min="8" max="21">
       </div>
 
       <button type="submit" class="btn btn-danger">Order</button>
     </form>
 
     <div id="result">
-      <h3>You ordered a <span class="pizza"></span>! Thank you come again!</h3>
+      <h3>You ordered a(n) <span class="pizza"></span>! Thank you come again!</h3>
       <span class="valid"><img src="kkpizza.png" alt="A photo of Mr.Krabs smiling with a pizza"></span>
       <span class="invalid"><img src="http://vignette2.wikia.nocookie.net/fanon/images/f/f6/Patrickplz.gif/revision/latest?cb=20101230160527"></span>
     </div>
