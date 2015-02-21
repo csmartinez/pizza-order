@@ -15,7 +15,7 @@ var pizzaOrder = function(type, size) {
       slices = slices + 12;
       category = "x-large"
     } else if ((size > 21) || (size < 8)) {
-      alert("PIZZA CASTLE: We do not serve pizzas that large or small. Sorry.")
+      alert("KRUSTY KRAB PIZZA: We do not serve pizzas that large or small. Sorry.")
       return "invalid pizza"
     }
 
